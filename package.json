@@ -1,0 +1,25 @@
+{
+  "name": "Project_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcollins2011/BLAST_Project_3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcollins2011/BLAST_Project_3/issues"
+  },
+  "homepage": "https://github.com/tcollins2011/BLAST_Project_3#readme"
+}
