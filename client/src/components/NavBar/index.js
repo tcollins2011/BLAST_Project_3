@@ -1,7 +1,7 @@
 // src/components/NavBar.js
 
 import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "../../react-auth0-spa";
 
 // src/components/NavBar.js
 // .. other imports
@@ -21,8 +21,9 @@ const NavBar = () => {
       {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
       {isAuthenticated && (
         <span>
-          {/* <Link to="/">Home</Link>&nbsp;
-          <Link to="/profile">Profile</Link> */}
+          <Link to="/">Home</Link>&nbsp;
+          <Link to="/profile">Profile</Link>&nbsp;
+          <Link to="/blast">Blast</Link>
         </span>
       )}
     </div>
