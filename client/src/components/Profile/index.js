@@ -10,6 +10,7 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(user.sub)
   return (
     <Fragment>
       <img src={user.picture} alt="Profile" />
