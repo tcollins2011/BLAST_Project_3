@@ -5,19 +5,23 @@ function Explanation () {
     return(
         <>
         <h1>So How Does this Search Work</h1>
-        <li className ="bold">Remove low-complexity region or sequence repeats in the query sequence</li>
-        <p>"Low-complexity region" means a region of a sequence composed of few kinds of elements. These regions might give high scores that confuse the program to find the actual significant sequences in the database, so they should be filtered out. The regions will be marked with an X (protein sequences) or N (nucleic acid sequences) and then be ignored by the BLAST program. To filter out the low-complexity regions, the SEG program is used for protein sequences and the program DUST is used for DNA sequences. On the other hand, the program XNU is used to mask off the tandem repeats in protein sequences.</p>
-        <Image ></Image>
+        <li>Remove low-complexity query regions </li>
+        <p>A "low-complexity region" refers to any area of the query that is composed of repeating elements. These regions have the possibility to confuse the program to cause it to incorrectly determine areas of significance. As a result these areas are filtered by an algorithm known as SEG to remove them. </p>
         <li> Make a k-letter word list of the query sequence</li>
-        <p>Take k=3 for example, we list the words of length 3 in the query protein sequence (k is usually 11 for a DNA sequence) "sequentially", until the last letter of the query sequence is included. The method is illustrated in figure 1.</p>
-        <li>List the possible matching words.</li>
+        <p>For a protein we create as many sequential words of length 3, known as kmers, from the query as possible (see figure 1). </p>
+        <Image ></Image>
+        <li>Determine word score with BLOSUM 62.</li>
+        <p>BLAST then assigns a score to each 3 letter word based on   </p>
+        <Image ></Image>
         <p></p>
+        <Image></Image>
         <li>Organize the remaining high-scoring words into an efficient search tree.</li>
         <p>This allows the program to rapidly compare the high-scoring words to the database sequences.</p>
         <li>Repeat step 3 to 4 for each k-letter word in the query sequence.</li>
         <p></p>
         <li>Scan the database sequences for exact matches with the remaining high-scoring words.</li>
         <p>The BLAST program scans the database sequences for the remaining high-scoring word, such as PEG, of each position. If an exact match is found, this match is used to seed a possible un-gapped alignment between the query and database sequences.</p>
+        <Image ></Image>
         <li>Extend the exact matches to high-scoring segment pair (HSP).</li>
         <p>The original version of BLAST stretches a longer alignment between the query and the database sequence in the left and right directions, from the position where the exact match occurred. The extension does not stop until the accumulated total score of the HSP begins to decrease. A simplified example is presented in figure 2.</p>
         <li>List all of the HSPs in the database whose score is high enough to be considered.</li>

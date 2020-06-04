@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import './home.css'
 
 
-
-function Home() {
-    // Add state 
-    
+function Home() {   
     return(
-        <div>Im the Home page</div>
+        <div className='DNA'>
+            <h1>hi</h1>
+        </div>
+        
     )
 }
 
