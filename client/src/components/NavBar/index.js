@@ -8,6 +8,7 @@ import { Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import "./style.css";
 // src/components/NavBar.js
 // .. other imports
 
@@ -19,21 +20,40 @@ const NavBar = () => {
 
   return (
     <div>
-      {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect({})}>Log in</button>
-      )}
-
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/profile">Features</NavLink>
-          <NavLink to="#pricing">Pricing</NavLink>
+          <NavLink
+            style={{ margin: "0 30px" color: "#66fcf1" }}
+            
+            class="NavButton"
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            style={{ margin: "0 30px" }}
+            style={{ color: "#66fcf1" }}
+            class="NavButton"
+            to="/profile"
+          >
+            Features
+          </NavLink>
+          <NavLink
+            style={{ margin: "0 30px" }}
+            style={{ color: "#66fcf1" }}
+            class="NavButton"
+            to="#pricing"
+          >
+            Pricing
+          </NavLink>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
+          {!isAuthenticated && (
+            <button onClick={() => loginWithRedirect({})}>Log in</button>
+          )}
+
+          {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
         </Form>
       </Navbar>
     </div>
