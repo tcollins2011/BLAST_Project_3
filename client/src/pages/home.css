@@ -1,12 +1,12 @@
 .DNA {
-    /* The image used */
-    background-image: url(../utils/backgroundImages/DNA_Helix.png);
+  /* The image used */
+  /* background-image: url(../utils/backgroundImages/DNA_Helix.png); */
 
-    /* Full height */
-    height: 100%; 
+  /* Full height */
+  height: 100%;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

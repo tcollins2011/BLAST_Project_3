@@ -21,7 +21,9 @@ const NavBar = () => {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand style={{ color: "#66fcf1" }} href="/">
+          EasyBLAST
+        </Navbar.Brand>
         <Nav className="mr-auto">
           <NavLink style={{ color: "#66fcf1" }} className="NavButton" to="/">
             Home
@@ -29,24 +31,30 @@ const NavBar = () => {
           <NavLink
             style={{ color: "#66fcf1" }}
             className="NavButton"
-            to="/profile"
+            to="/blast"
           >
-            Features
+            BLAST
           </NavLink>
           <NavLink
             style={{ color: "#66fcf1" }}
             className="NavButton"
-            to="#pricing"
+            to="/explanation"
           >
-            Pricing
+            Explanation
           </NavLink>
         </Nav>
         <Form inline></Form>
         {!isAuthenticated && (
-          <button onClick={() => loginWithRedirect({})}>Log in</button>
+          <button className="LogButton" onClick={() => loginWithRedirect({})}>
+            Log in
+          </button>
         )}
 
-        {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+        {isAuthenticated && (
+          <button className="LogButton" onClick={() => logout()}>
+            Log out
+          </button>
+        )}
       </Navbar>
     </div>
     //..
