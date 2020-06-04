@@ -1,0 +1,14 @@
+.NavButton {
+  text-align: center;
+  color: #66fcf1;
+  display: inline;
+  margin-right: 20%;
+}
+
+body {
+  background-color: #45a29e;
+}
+.LogButton {
+  background-color: #c5c6c7;
+  color: #0b0c10;
+}
