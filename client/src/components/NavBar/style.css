@@ -1,6 +1,7 @@
 .NavButton {
   color: #66fcf1;
   display: inline;
+  margin-right: 30px;
 }
 
 body {

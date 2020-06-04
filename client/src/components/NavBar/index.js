@@ -23,28 +23,30 @@ const NavBar = () => {
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <NavLink class="NavButton" to="/">
+          <NavLink style={{ color: "#66fcf1" }} className="NavButton" to="/">
             Home
           </NavLink>
           <NavLink
-            style={{ margin: "0 30px" }}
             style={{ color: "#66fcf1" }}
-            class="NavButton"
+            className="NavButton"
             to="/profile"
           >
             Features
           </NavLink>
-          <NavLink class="NavButton" to="#pricing">
+          <NavLink
+            style={{ color: "#66fcf1" }}
+            className="NavButton"
+            to="#pricing"
+          >
             Pricing
           </NavLink>
         </Nav>
-        <Form inline>
-          {!isAuthenticated && (
-            <button onClick={() => loginWithRedirect({})}>Log in</button>
-          )}
+        <Form inline></Form>
+        {!isAuthenticated && (
+          <button onClick={() => loginWithRedirect({})}>Log in</button>
+        )}
 
-          {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
-        </Form>
+        {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
       </Navbar>
     </div>
     //..
