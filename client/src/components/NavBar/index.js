@@ -23,12 +23,7 @@ const NavBar = () => {
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <NavLink
-            style={{ margin: "0 30px" color: "#66fcf1" }}
-            
-            class="NavButton"
-            to="/"
-          >
+          <NavLink class="NavButton" to="/">
             Home
           </NavLink>
           <NavLink
@@ -39,12 +34,7 @@ const NavBar = () => {
           >
             Features
           </NavLink>
-          <NavLink
-            style={{ margin: "0 30px" }}
-            style={{ color: "#66fcf1" }}
-            class="NavButton"
-            to="#pricing"
-          >
+          <NavLink class="NavButton" to="#pricing">
             Pricing
           </NavLink>
         </Nav>
