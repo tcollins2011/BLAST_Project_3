@@ -5,10 +5,10 @@ import BlastContext from "../../utils/blastContext"
 
 function BlastForm() {
     const inputRef = useRef()
-    const {nucleotides,setBlast} = useContext(BlastContext);
+    const {loadingVisibility,outputVisibility,blast,setBlast} = useContext(BlastContext);
     const submitForm = (e) => {
         e.preventDefault()
-        setBlast({nucleotides:inputRef.current.value})
+        setBlast({...blast,nucleotides:inputRef.current.value,loadingVisibility:"active",outputVisibility:""})
     }
     return(
         <>
@@ -21,11 +21,14 @@ function BlastForm() {
                     BLAST!
                 </Button>
             </Form>
-            <fieldset className="hidden" id="outputWrapper">
+            <div className={`loading ${loadingVisibility ? "" : "hidden"}`} id="blastLoader">Blast is comparing your sequence</div>
+            <fieldset className={`loading ${outputVisibility ? "" : "hidden"}`}  id="outputWrapper">
                 <h1>Output</h1>
-                <textarea id="output" readOnly/>
+                {/* <textarea id="output" readOnly/> */}
+                <img src ={require("../../utils/searchimages/Image1.png")}></img>
+                <img src ={require("../../utils/searchimages/Image2.PNG")}></img>
 
-                <div className="loader hidden" id="blastLoader">Blasting...</div>
+                
           </fieldset>
         </>
     )
