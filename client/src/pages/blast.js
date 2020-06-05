@@ -5,15 +5,25 @@ import BlastContext from "../utils/blastContext";
 function Blast() {
   const [blast, setBlast] = useState({
     nucleotides: "",
-    outputVisibility: "hidden",
+    loadingVisibility: "",
+    outputVisibility: "",
   });
 
-  useEffect(() => {});
-  const searchBlast = (e) => {};
+  useEffect(() => {
+    if (blast.loadingVisibility === 'active'){
+      setTimeout(() => {
+        console.log('I waited 20 seconds')
+        setBlast({...blast, loadingVisibility: "", outputVisibility: "active"})
+    }  
+    ,10000)
+    }
+  });
+ 
+
 
   return (
     <BlastContext.Provider
-      value={{ nucleotides: blast.nucleotides, setBlast: setBlast }}
+      value={{loadingVisibility: blast.loadingVisibility, outputVisibility: blast.outputVisibility, blast:blast, nucleotides: blast.nucleotides, setBlast: setBlast }}
     >
       <div>
         <h1 style={{ textAlign: "center" }}>Test Blast!</h1>
