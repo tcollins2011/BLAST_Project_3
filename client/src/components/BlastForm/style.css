@@ -1,6 +1,19 @@
 .hidden {
   display: none;
 }
+.center{ 
+  Display: flex; 
+  Align-Items: center;
+  Justify-Content: center;
+  Width: 100vw; 
+  }
+  .centerImg{ 
+    Display: flex; 
+    Align-Items: center;
+    Justify-Content: center;
+    Width: 50vw; 
+    margin-left: 25%;
+    }
 .textBox {
   margin-left: 2%;
   width: 96%;

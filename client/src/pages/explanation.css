@@ -1,4 +1,21 @@
 .textStyle {
   color: #1f2833;
-  width: 60%;
+}
+
+li {
+  font-weight: bold;
+}   
+
+p {
+  margin-left: 3%;
+}
+
+.textArea{
+  float: left;
+  width: 70%;
+}
+
+.imageArea{
+  float: left;
+  width: 30%;
 }

@@ -2,6 +2,7 @@ import React, { useContext, useRef } from "react";
 import "./style.css";
 import { Form, Button } from "react-bootstrap";
 import BlastContext from "../../utils/blastContext";
+import Row from "../row"
 
 function BlastForm() {
     const inputRef = useRef()
@@ -32,12 +33,17 @@ function BlastForm() {
                 BLAST!
                 </Button>
             </Form>
-            <div className={`loading ${loadingVisibility ? "" : "hidden"}`} id="blastLoader">Blast is comparing your sequence</div>
-            <fieldset className={`loading ${outputVisibility ? "" : "hidden"}`}  id="outputWrapper">
-                <h1>Output</h1>
+            <h1 className={` ${loadingVisibility ? "center" : "hidden"}`} id="blastLoader">Blast is comparing your sequence</h1>
+            <fieldset  className={` ${outputVisibility ? "center" : "hidden"}`}  id="outputWrapper">
+                <h1 className={` ${outputVisibility ? "center" : "hidden"}`}>Output</h1>
                 {/* <textarea id="output" readOnly/> */}
-                <img src ={require("../../utils/searchimages/Image1.png")}></img>
-                <img src ={require("../../utils/searchimages/Image2.PNG")}></img>
+                <Row>
+                    <img className={` ${outputVisibility ? "centerImg" : "hidden"}`} src ={require("../../utils/searchimages/Image1.png")}></img>
+                </Row>
+                <Row>
+                    <img className={` ${outputVisibility ? "centerImg" : "hidden"}`} src ={require("../../utils/searchimages/Image2.PNG")}></img>
+                </Row>
+                
 
                 
           </fieldset>
