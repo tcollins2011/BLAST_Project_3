@@ -9,16 +9,14 @@ function Blast() {
   });
 
   useEffect(() => {});
-  const searchBlast = (e) => {
-    console.log("hi");
-  };
+  const searchBlast = (e) => {};
 
   return (
     <BlastContext.Provider
       value={{ nucleotides: blast.nucleotides, setBlast: setBlast }}
     >
       <div>
-        <h1>Test Blast</h1>
+        <h1 style={{ textAlign: "center" }}>Test Blast!</h1>
         <Form />
       </div>
     </BlastContext.Provider>
