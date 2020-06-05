@@ -26,7 +26,7 @@ function Blast() {
       value={{loadingVisibility: blast.loadingVisibility, outputVisibility: blast.outputVisibility, blast:blast, nucleotides: blast.nucleotides, setBlast: setBlast }}
     >
       <div>
-        <h1>Test Blast</h1>
+        <h1 style={{ textAlign: "center" }}>Test Blast!</h1>
         <Form />
       </div>
     </BlastContext.Provider>
