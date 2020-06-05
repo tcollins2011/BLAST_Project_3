@@ -1,3 +1,16 @@
 .hidden {
-    display: none;
+  display: none;
+}
+.textBox {
+  margin-left: 2%;
+  width: 96%;
+  background-color: #c5c6c7;
+}
+.title {
+  font-size: large;
+  font-weight: bold;
+}
+.blastButton {
+  background-color: #1f2833;
+  color: #66fcf1;
 }

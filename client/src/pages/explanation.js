@@ -19,7 +19,10 @@ function Explanation() {
         For a protein we create as many sequential words of length 3, known as
         kmers, from the query as possible (see figure 1).{" "}
       </p>
-      <Image source={require("../utils/blastImages/Figure_1.jpg")}></Image>
+      <Image
+        style={{ float: "right" }}
+        source={require("../utils/blastImages/Figure_1.jpg")}
+      ></Image>
       <li>Determine word score with BLOSUM 62.</li>
       <p>BLAST then assigns a score to each 3 letter word based on </p>
       <Image source={require("../utils/blastImages/Figure_2.png")}></Image>
